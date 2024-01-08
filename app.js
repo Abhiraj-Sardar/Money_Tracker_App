@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.get("/",async(req,res)=>{
     const expenseList = await expenses.find({});
-    console.log(expenseList);
+    // console.log(expenseList);
     res.render("index",{
         expenseList:expenseList
     });
